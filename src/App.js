@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Friend from "./pages/Friend"
+import Friends from "./pages/Friends"
 
 export const FRIENDS = [
   {
@@ -37,14 +37,14 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/About">About</Link></li>
-            <li><Link to="/Friend">Friend</Link></li>
+            <li><Link to="/Friends">Friends</Link></li>
           </ul>
         </nav>
 
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/About" component={About}/>
-          <Route exact path="/Friend" component={Friend}/>
+          <Route exact path="/Friends" component={Friends}/>
         </Switch>
       </Router>
     </div>
