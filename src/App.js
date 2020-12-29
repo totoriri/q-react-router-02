@@ -4,6 +4,31 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Friend from "./pages/Friend"
 
+const FRIENDS = [
+  {
+    id: 'serval',
+    nameJa: 'サーバル',
+    nameEn: 'Serval Cat',
+    family: 'ネコ目ネコ科ネコ属'
+  },
+  {
+    id: 'raccoon',
+    nameJa: 'アライグマ',
+    nameEn: 'Common raccoon',
+    family: 'ネコ目アライグマ科アライグマ属'
+  },
+  {
+    id: 'fennec',
+    nameJa: 'フェネック',
+    nameEn: 'Fennec',
+    family: 'ネコ目イヌ科キツネ属'
+  }
+]
+
+// findメソッドで、配列内において条件に合致した一番最初の要素を返している。
+// つまり、idをもとにリストから対応するキャラクターのオブジェクトを探すfriendByIdという関数を定義しただけ。
+const friendById = id => FRIENDS.find(friend => friend.id === id)
+
 function App() {
   return (
     <div className="App">
