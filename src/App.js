@@ -4,7 +4,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Friend from "./pages/Friend"
 
-const FRIENDS = [
+export const FRIENDS = [
   {
     id: 'serval',
     nameJa: 'サーバル',
@@ -27,7 +27,7 @@ const FRIENDS = [
 
 // findメソッドで、配列内において条件に合致した一番最初の要素を返している。
 // つまり、idをもとにリストから対応するキャラクターのオブジェクトを探すfriendByIdという関数を定義しただけ。
-const friendById = id => FRIENDS.find(friend => friend.id === id)
+export const friendById = id => FRIENDS.find(friend => friend.id === id)
 
 function App() {
   return (
