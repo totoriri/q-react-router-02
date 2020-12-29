@@ -8,6 +8,14 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/About">About</Link></li>
+            <li><Link to="/Friend">Friend</Link></li>
+          </ul>
+        </nav>
+
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/About" component={About}/>
