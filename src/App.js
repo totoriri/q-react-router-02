@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Friends from "./pages/Friends"
+import Friend from "./components/Friend"
 
 export const FRIENDS = [
   {
@@ -37,14 +38,16 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/About">About</Link></li>
-            <li><Link to="/Friends">Friends</Link></li>
+            <li><Link to="/friends">Friends</Link></li>
           </ul>
         </nav>
 
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/About" component={About}/>
-          <Route exact path="/Friends" component={Friends}/>
+          <Route exact path="/friends" component={Friends} />
+          {/* ↓もとは frinds.jsに配置されていたコード。*/}
+          <Route path='/friends/:id' component={Friend} />
         </Switch>
       </Router>
     </div>
